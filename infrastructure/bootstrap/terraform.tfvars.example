@@ -1,0 +1,6 @@
+project_code         = "liai"
+location             = "centralindia"
+region_code          = "cin"
+instance             = "001"
+owner                = "rajesh-arigala"
+state_container_name = "tfstate"
