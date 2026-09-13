@@ -1,0 +1,4 @@
+project_name = "life-insurance-ai"
+environment  = "dev"
+location     = "centralindia"
+owner        = "rajesh-arigala"
