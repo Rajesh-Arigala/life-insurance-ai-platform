@@ -45,8 +45,18 @@ variable "owner" {
   default     = "rajesh-arigala"
 }
 
-variable "monthly_budget_inr" {
-  description = "Monthly DEV budget in INR."
+variable "allowed_public_ip" {
+  description = "Public IPv4 address allowed through Storage and Key Vault firewalls."
+  type        = string
+}
+
+variable "monthly_budget_amount" {
+  description = "Monthly Azure DEV budget in the subscription billing currency."
   type        = number
   default     = 500
+}
+
+variable "budget_start_date" {
+  description = "Budget start date. Must be the first day of the month in UTC."
+  type        = string
 }

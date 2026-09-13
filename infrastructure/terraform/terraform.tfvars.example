@@ -1,8 +1,19 @@
-project_name       = "life-insurance-ai"
-project_code       = "liai"
-environment        = "dev"
-location           = "centralindia"
-region_code        = "cin"
-instance           = "001"
-owner              = "rajesh-arigala"
-monthly_budget_inr = 500
+project_name = "life-insurance-ai"
+project_code = "liai"
+
+environment = "dev"
+
+location    = "centralindia"
+region_code = "cin"
+instance    = "001"
+
+owner = "rajesh-arigala"
+
+# Replace with your actual public IPv4 address before planning.
+allowed_public_ip = "203.0.113.10"
+
+# Interpreted in your Azure subscription's billing currency.
+monthly_budget_amount = 500
+
+# Must be the first day of the applicable month.
+budget_start_date = "2026-09-01T00:00:00Z"

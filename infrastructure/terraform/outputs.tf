@@ -1,29 +1,24 @@
-output "planned_resource_group_name" {
-  description = "Planned Azure Resource Group name."
-  value       = local.resource_group_name
+output "resource_group_name" {
+  description = "Azure DEV Resource Group name."
+  value       = azurerm_resource_group.main.name
 }
 
-output "planned_key_vault_name" {
-  description = "Planned Azure Key Vault name."
-  value       = local.key_vault_name
+output "storage_account_name" {
+  description = "Azure ADLS Gen2 Storage Account name."
+  value       = azurerm_storage_account.data.name
 }
 
-output "planned_storage_account_name" {
-  description = "Planned Azure Storage Account name."
-  value       = local.storage_account_name
+output "key_vault_name" {
+  description = "Azure Key Vault name."
+  value       = azurerm_key_vault.main.name
 }
 
 output "azure_location" {
-  description = "Planned Azure deployment region."
+  description = "Azure deployment region."
   value       = var.location
 }
 
-output "monthly_budget_inr" {
-  description = "Planned monthly development budget."
-  value       = var.monthly_budget_inr
-}
-
-output "common_tags" {
-  description = "Standard tags that will be applied to Azure resources."
-  value       = local.common_tags
+output "monthly_budget_amount" {
+  description = "Monthly DEV budget in the subscription billing currency."
+  value       = var.monthly_budget_amount
 }
