@@ -30,6 +30,11 @@ resource "azurerm_storage_account" "tfstate" {
   allow_nested_items_to_be_public = false
   public_network_access           = "Enabled"
 
+
+  shared_access_key_enabled       = false
+  default_to_oauth_authentication = true
+  local_user_enabled              = false
+
   tags = local.common_tags
 }
 
@@ -43,4 +48,5 @@ resource "azurerm_storage_container" "tfstate" {
   name                  = var.state_container_name
   storage_account_id    = azurerm_storage_account.tfstate.id
   container_access_type = "private"
+
 }
