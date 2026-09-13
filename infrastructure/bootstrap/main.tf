@@ -1,3 +1,5 @@
+data "azurerm_client_config" "current" {}
+
 locals {
   resource_group_name  = "rg-${var.project_code}-tfstate-${var.region_code}-${var.instance}"
   storage_account_name = "st${var.project_code}tfstate${var.region_code}${var.instance}"
@@ -29,6 +31,12 @@ resource "azurerm_storage_account" "tfstate" {
   public_network_access           = "Enabled"
 
   tags = local.common_tags
+}
+
+resource "azurerm_role_assignment" "tfstate_blob_contributor" {
+  scope                = azurerm_storage_account.tfstate.id
+  role_definition_name = "Storage Blob Data Contributor"
+  principal_id         = data.azurerm_client_config.current.object_id
 }
 
 resource "azurerm_storage_container" "tfstate" {
