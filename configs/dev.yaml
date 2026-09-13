@@ -1,0 +1,8 @@
+environment: dev
+
+database:
+  pool_pre_ping: true
+  echo_sql: false
+
+notebook:
+  max_display_rows: 50

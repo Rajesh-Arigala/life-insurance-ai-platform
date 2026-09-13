@@ -1,0 +1,26 @@
+project:
+  name: life-insurance-ai-platform
+  domain: financial_services
+  subdomain: life_insurance
+  initial_use_case: persistency_policy_lapse_prediction
+
+paths:
+  data: data
+  raw: data/raw
+  bronze: data/bronze
+  silver: data/silver
+  gold: data/gold
+  sql_schemas: sql/schemas
+  sql_queries: sql/queries
+
+database:
+  driver: mysql+pymysql
+  host_env: MYSQL_HOST
+  port_env: MYSQL_PORT
+  user_env: MYSQL_USER
+  password_env: MYSQL_PASSWORD
+  policy_db_env: MYSQL_POLICY_DB
+  billing_db_env: MYSQL_BILLING_DB
+
+logging:
+  level: INFO
