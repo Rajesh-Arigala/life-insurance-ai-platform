@@ -1,4 +1,8 @@
-project_name = "life-insurance-ai"
-environment  = "dev"
-location     = "centralindia"
-owner        = "rajesh-arigala"
+project_name       = "life-insurance-ai"
+project_code       = "liai"
+environment        = "dev"
+location           = "centralindia"
+region_code        = "cin"
+instance           = "001"
+owner              = "rajesh-arigala"
+monthly_budget_inr = 500
