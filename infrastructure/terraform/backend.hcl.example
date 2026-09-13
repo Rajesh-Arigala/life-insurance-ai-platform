@@ -1,0 +1,7 @@
+resource_group_name  = "rg-liai-tfstate-cin-001"
+storage_account_name = "stliaitfstatecin001"
+container_name       = "tfstate"
+key                  = "dev.terraform.tfstate"
+
+use_azuread_auth = true
+use_cli          = true
